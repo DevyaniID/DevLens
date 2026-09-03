@@ -1,33 +1,27 @@
-import {
-  FolderGit2,
-  Code2,
-  Network,
-  MessageSquare,
-  ArrowRight,
-} from "lucide-react";
+import { FolderGit2, FileCode2, Network, MessageSquare, Upload } from "lucide-react";
 
 function Dashboard() {
   return (
     <div>
-
-      <div className="dashboard-header">
+      <div className="page-header">
         <div>
-          <h1>Welcome to DevLens 👋</h1>
+          <h1>Welcome to DevLens</h1>
           <p>
             Understand unfamiliar software projects with AI-powered analysis.
           </p>
         </div>
 
         <button className="primary-button">
+          <Upload size={18} />
           Analyze Repository
-          <ArrowRight size={17} />
         </button>
       </div>
 
       <div className="stats-grid">
-
         <div className="stat-card">
-          <FolderGit2 size={24} />
+          <div className="stat-icon">
+            <FolderGit2 size={22} />
+          </div>
           <div>
             <span>Projects</span>
             <strong>0</strong>
@@ -35,7 +29,9 @@ function Dashboard() {
         </div>
 
         <div className="stat-card">
-          <Code2 size={24} />
+          <div className="stat-icon">
+            <FileCode2 size={22} />
+          </div>
           <div>
             <span>Files Analyzed</span>
             <strong>0</strong>
@@ -43,7 +39,9 @@ function Dashboard() {
         </div>
 
         <div className="stat-card">
-          <Network size={24} />
+          <div className="stat-icon">
+            <Network size={22} />
+          </div>
           <div>
             <span>Architectures</span>
             <strong>0</strong>
@@ -51,30 +49,30 @@ function Dashboard() {
         </div>
 
         <div className="stat-card">
-          <MessageSquare size={24} />
+          <div className="stat-icon">
+            <MessageSquare size={22} />
+          </div>
           <div>
             <span>AI Queries</span>
             <strong>0</strong>
           </div>
         </div>
-
       </div>
 
-      <div className="section-card">
-
-        <div className="section-heading">
+      <div className="analyze-card">
+        <div className="analyze-header">
           <div>
             <h2>Analyze a New Repository</h2>
             <p>
-              Upload a ZIP file or provide a GitHub repository URL.
+              Enter a GitHub repository URL or upload a ZIP file to begin.
             </p>
           </div>
         </div>
 
-        <div className="repository-input">
+        <div className="github-input-row">
           <input
             type="text"
-            placeholder="https://github.com/username/project"
+            placeholder="https://github.com/user/repository"
           />
 
           <button className="primary-button">
@@ -83,21 +81,15 @@ function Dashboard() {
         </div>
 
         <div className="upload-box">
-          <FolderGit2 size={30} />
-
-          <h3>Upload ZIP Repository</h3>
-
-          <p>
-            Drag and drop your project here or browse your computer.
-          </p>
+          <Upload size={32} />
+          <h3>Upload Repository ZIP</h3>
+          <p>Drag and drop your project here, or click to browse.</p>
 
           <button className="secondary-button">
-            Browse Files
+            Choose ZIP File
           </button>
         </div>
-
       </div>
-
     </div>
   );
 }

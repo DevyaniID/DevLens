@@ -253,3 +253,99 @@ a {
   font-size: 14px;
   margin-bottom: 15px;
 }
+
+/* Page Header */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.page-header p {
+  color: #7b8495;
+}
+
+/* Empty State */
+
+.empty-state {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 70px 30px;
+  text-align: center;
+  max-width: 750px;
+  margin: 40px auto;
+}
+
+.empty-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  max-width: 500px;
+  margin: 0 auto 25px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Analyze Repository */
+
+.analyze-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.analyze-header {
+  margin-bottom: 20px;
+}
+
+.analyze-header h2 {
+  font-size: 19px;
+  margin-bottom: 5px;
+}
+
+.analyze-header p {
+  color: #7b8495;
+  font-size: 14px;
+}
+
+.github-input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.github-input-row input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #d8dee9;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.github-input-row input:focus {
+  border-color: #2563eb;
+}
