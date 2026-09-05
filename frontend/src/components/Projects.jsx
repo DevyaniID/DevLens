@@ -1,6 +1,15 @@
-import { FolderGit2, Plus, Clock } from "lucide-react";
+
+import { FolderGit2, Plus } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
 function Projects() {
+  const navigate = useNavigate();
+
   const projects = [];
+
+  const handleNewProject = () => {
+    navigate("/upload");
+  };
 
   return (
     <div>
@@ -10,7 +19,10 @@ function Projects() {
           <p>Manage and analyze your software repositories.</p>
         </div>
 
-        <button className="primary-button">
+        <button
+          className="primary-button"
+          onClick={handleNewProject}
+        >
           <Plus size={18} />
           New Project
         </button>
@@ -29,7 +41,10 @@ function Projects() {
             its architecture, code structure, and dependencies.
           </p>
 
-          <button className="primary-button">
+          <button
+            className="primary-button"
+            onClick={handleNewProject}
+          >
             Analyze Your First Project
           </button>
         </div>
@@ -43,3 +58,4 @@ function Projects() {
 }
 
 export default Projects;
+
